@@ -11,9 +11,13 @@ export function Nav() {
   const isHome = pathname === "/";
   const [open, setOpen] = useState(false);
 
-  const links: Array<{ to: "/" | "/photography" | "/vendors" | "/logistics" | "/menu"; key: Parameters<typeof t>[0] }> = [
+  const links: Array<{
+    to: "/" | "/photography" | "/gallery" | "/vendors" | "/logistics" | "/menu";
+    key: Parameters<typeof t>[0];
+  }> = [
     { to: "/", key: "navHome" },
     { to: "/photography", key: "navPhoto" },
+    { to: "/gallery", key: "navGallery" },
     { to: "/vendors", key: "navVendors" },
     { to: "/logistics", key: "navLogistics" },
     { to: "/menu", key: "navMenu" },

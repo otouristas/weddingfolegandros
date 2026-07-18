@@ -132,6 +132,12 @@ function Index() {
             <p className="mt-6 text-lg leading-relaxed text-ink/85 font-light">
               {t("islandBody")}
             </p>
+            <Link
+              to="/gallery"
+              className="inline-flex mt-8 text-sm tracking-[0.2em] uppercase text-terracotta hover:opacity-70 transition-opacity"
+            >
+              {t("navGallery")} →
+            </Link>
             <img
               src={olive}
               alt="Olive branch"

@@ -13,6 +13,7 @@ import { Route as VendorsRouteImport } from './routes/vendors'
 import { Route as PhotographyRouteImport } from './routes/photography'
 import { Route as MenuRouteImport } from './routes/menu'
 import { Route as LogisticsRouteImport } from './routes/logistics'
+import { Route as GalleryRouteImport } from './routes/gallery'
 import { Route as IndexRouteImport } from './routes/index'
 
 const VendorsRoute = VendorsRouteImport.update({
@@ -35,6 +36,11 @@ const LogisticsRoute = LogisticsRouteImport.update({
   path: '/logistics',
   getParentRoute: () => rootRouteImport,
 } as any)
+const GalleryRoute = GalleryRouteImport.update({
+  id: '/gallery',
+  path: '/gallery',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -43,6 +49,7 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/gallery': typeof GalleryRoute
   '/logistics': typeof LogisticsRoute
   '/menu': typeof MenuRoute
   '/photography': typeof PhotographyRoute
@@ -50,6 +57,7 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/gallery': typeof GalleryRoute
   '/logistics': typeof LogisticsRoute
   '/menu': typeof MenuRoute
   '/photography': typeof PhotographyRoute
@@ -58,6 +66,7 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/gallery': typeof GalleryRoute
   '/logistics': typeof LogisticsRoute
   '/menu': typeof MenuRoute
   '/photography': typeof PhotographyRoute
@@ -65,14 +74,28 @@ export interface FileRoutesById {
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/logistics' | '/menu' | '/photography' | '/vendors'
+  fullPaths:
+    | '/'
+    | '/gallery'
+    | '/logistics'
+    | '/menu'
+    | '/photography'
+    | '/vendors'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/logistics' | '/menu' | '/photography' | '/vendors'
-  id: '__root__' | '/' | '/logistics' | '/menu' | '/photography' | '/vendors'
+  to: '/' | '/gallery' | '/logistics' | '/menu' | '/photography' | '/vendors'
+  id:
+    | '__root__'
+    | '/'
+    | '/gallery'
+    | '/logistics'
+    | '/menu'
+    | '/photography'
+    | '/vendors'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  GalleryRoute: typeof GalleryRoute
   LogisticsRoute: typeof LogisticsRoute
   MenuRoute: typeof MenuRoute
   PhotographyRoute: typeof PhotographyRoute
@@ -109,6 +132,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof LogisticsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/gallery': {
+      id: '/gallery'
+      path: '/gallery'
+      fullPath: '/gallery'
+      preLoaderRoute: typeof GalleryRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -121,6 +151,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  GalleryRoute: GalleryRoute,
   LogisticsRoute: LogisticsRoute,
   MenuRoute: MenuRoute,
   PhotographyRoute: PhotographyRoute,
@@ -129,3 +160,13 @@ const rootRouteChildren: RootRouteChildren = {
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
   ._addFileTypes<FileRouteTypes>()
+
+import type { getRouter } from './router.tsx'
+import type { startInstance } from './start.ts'
+declare module '@tanstack/react-start' {
+  interface Register {
+    ssr: true
+    router: Awaited<ReturnType<typeof getRouter>>
+    config: Awaited<ReturnType<typeof startInstance.getOptions>>
+  }
+}

@@ -5,6 +5,7 @@ type Dict = Record<string, { en: string; el: string }>;
 export const t: Dict = {
   navHome: { en: "Overview", el: "Επισκόπηση" },
   navPhoto: { en: "Photography", el: "Φωτογραφία" },
+  navGallery: { en: "Gallery", el: "Γκαλερί" },
   navVendors: { en: "Vendors", el: "Συνεργάτες" },
   navLogistics: { en: "Travel & Stay", el: "Ταξίδι & Διαμονή" },
   navMenu: { en: "Menu", el: "Μενού" },
