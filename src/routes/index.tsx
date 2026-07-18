@@ -246,11 +246,26 @@ function Index() {
             <SectionTitle>{t("ceremonyTitle")}</SectionTitle>
             <ul className="mt-8 space-y-4 text-ink/85">
               {[
-                { l: lang === "en" ? "Church & priest" : "Εκκλησία & ιερέας", p: "€350" },
-                { l: lang === "en" ? "Transport to St. Mary's" : "Μεταφορά προς Αγ. Μαρίας", p: "€250" },
-                { l: lang === "en" ? "Chora village church" : "Εκκλησία Χώρας", p: lang === "en" ? "no charge" : "χωρίς χρέωση" },
-                { l: lang === "en" ? "Guest transport (ATV)" : "Μεταφορά καλεσμένων (ATV)", p: lang === "en" ? "€30 / guest" : "€30 / άτομο" },
-                { l: lang === "en" ? "Wine, water, soft drinks & pasteli" : "Κρασί, νερό, αναψυκτικά & παστέλι", p: "€300–1250" },
+                {
+                  l: lang === "en" ? "Church & priest (all churches)" : "Εκκλησία & ιερέας (όλες οι εκκλησίες)",
+                  p: "€350",
+                },
+                {
+                  l: lang === "en" ? "Transport to St. Mary's" : "Μεταφορά προς Αγ. Μαρίας",
+                  p: "€250",
+                },
+                {
+                  l: lang === "en" ? "Chora village church — transport" : "Εκκλησία Χώρας — μεταφορικά",
+                  p: lang === "en" ? "no transport fee" : "χωρίς μεταφορικά",
+                },
+                {
+                  l: lang === "en" ? "Guest transport (ATV)" : "Μεταφορά καλεσμένων (ATV)",
+                  p: lang === "en" ? "€30 / guest" : "€30 / άτομο",
+                },
+                {
+                  l: lang === "en" ? "Wine, water, soft drinks & pasteli" : "Κρασί, νερό, αναψυκτικά & παστέλι",
+                  p: "€300–1250",
+                },
               ].map((r) => (
                 <li key={r.l} className="flex items-baseline justify-between gap-4 border-b border-border pb-3">
                   <span>{r.l}</span>

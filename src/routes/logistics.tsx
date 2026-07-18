@@ -129,17 +129,23 @@ function LogisticsPage() {
                 <span>{en ? "Private boat tour (up to 50 guests, weather permitting)" : "Ιδιωτικό boat tour (έως 50 άτομα, βάσει καιρού)"}</span>
                 <span className="font-display text-terracotta">—</span>
               </li>
-              <li className="py-4 flex items-baseline justify-between">
-                <span>{en ? "Church & priest" : "Εκκλησία & ιερέας"}</span>
-                <span className="font-display text-terracotta">€350</span>
+              <li className="py-4 flex items-baseline justify-between gap-4">
+                <span>{en ? "Church & priest (all churches)" : "Εκκλησία & ιερέας (όλες οι εκκλησίες)"}</span>
+                <span className="font-display text-terracotta whitespace-nowrap">€350</span>
               </li>
-              <li className="py-4 flex items-baseline justify-between">
+              <li className="py-4 flex items-baseline justify-between gap-4">
                 <span>{en ? "Transport to St. Mary's church" : "Μεταφορά προς Αγ. Μαρίας"}</span>
-                <span className="font-display text-terracotta">€250</span>
+                <span className="font-display text-terracotta whitespace-nowrap">€250</span>
               </li>
-              <li className="py-4 flex items-baseline justify-between">
+              <li className="py-4 flex items-baseline justify-between gap-4">
+                <span>{en ? "Chora village church — transport" : "Εκκλησία Χώρας — μεταφορικά"}</span>
+                <span className="font-display text-terracotta whitespace-nowrap">
+                  {en ? "no transport fee" : "χωρίς μεταφορικά"}
+                </span>
+              </li>
+              <li className="py-4 flex items-baseline justify-between gap-4">
                 <span>{en ? "Guest ATV transport to church" : "Μεταφορά καλεσμένων στην εκκλησία (ATV)"}</span>
-                <span className="font-display text-terracotta">€30 / {en ? "guest" : "άτομο"}</span>
+                <span className="font-display text-terracotta whitespace-nowrap">€30 / {en ? "guest" : "άτομο"}</span>
               </li>
               <li className="py-4 flex items-baseline justify-between">
                 <span>{en ? "Drinks & pasteli outside the church" : "Ποτά & παστέλι έξω από την εκκλησία"}</span>
