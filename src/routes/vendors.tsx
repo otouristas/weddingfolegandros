@@ -7,7 +7,7 @@ export const Route = createFileRoute("/vendors")({
   head: () => ({
     meta: [
       { title: "Vendors — Mafalda & Thanos" },
-      { name: "description", content: "DJ, flowers, hair & makeup, wedding planner and catering for the Folegandros wedding." },
+      { name: "description", content: "DJ, flowers, hair & makeup, wedding planner, cake and catering for the Folegandros wedding." },
       { property: "og:title", content: "Vendors — Mafalda & Thanos" },
       { property: "og:url", content: "/vendors" },
     ],
@@ -63,7 +63,7 @@ function VendorsPage() {
         rows={[
           { l: en ? "Paliomilos Restaurant — see menu" : "Paliomilos Restaurant — δείτε μενού", p: en ? "from €55 / person" : "από €55 / άτομο" },
           { l: "Piatsa Taverna", p: "€55–100 / person" },
-          { l: en ? "  + shared yard rental (Souvlaki Club)" : "  + ενοικίαση αυλής (Souvlaki Club)", p: "€1,500", sub: true },
+          { l: en ? "  + shared yard rental (Souvlaki Club)" : "  + ενοικίαση αυλής (Souvlaki Club)", p: "€2,000", sub: true },
           { l: en ? "Kritikos · Chic (May, June, September only)" : "Kritikos · Chic (Μάιος, Ιούνιος, Σεπτέμβριος)", p: "—" },
         ]}
       />
@@ -77,6 +77,39 @@ function VendorsPage() {
           { l: en ? "Both pre-wedding + next-day" : "Και pre-wedding + next-day", p: "€1,000" },
         ]}
         note={en ? "Pre-wedding / next-day options: beach, Chora, Ano Meria." : "Επιλογές για pre-wedding / next-day: παραλία, Χώρα, Άνω Μεριά."}
+      />
+
+      <VendorBlock
+        dark
+        kicker={en ? "06 · Cake & Sweets" : "06 · Κέικ & Γλυκά"}
+        title={en ? "Wedding cake & sweets" : "Γαμήλια τούρτα & γλυκά"}
+        rows={[
+          {
+            l: en ? "Wedding cake" : "Γαμήλια τούρτα",
+            p: "€200–500",
+          },
+          {
+            l: en ? "Sweets" : "Γλυκά",
+            p: en ? "€3–5 / person" : "€3–5 / άτομο",
+          },
+          {
+            l: "Tolis Sweet and Eats",
+            p: "—",
+          },
+          {
+            l: en ? "Η Κανέλα — Folegandros" : "Η Κανέλα — Φολέγανδρος",
+            p: "—",
+          },
+          {
+            l: en ? "Παρασάγγας — Folegandros" : "Παρασάγγας — Φολέγανδρος",
+            p: "—",
+          },
+        ]}
+        note={
+          en
+            ? "Local partners on Folegandros. Cake and sweets priced separately depending on design and selection."
+            : "Τοπικοί συνεργάτες στη Φολέγανδρο. Τούρτα και γλυκά χρεώνονται ξεχωριστά, ανάλογα με σχέδιο και επιλογές."
+        }
       />
 
       <Footer />

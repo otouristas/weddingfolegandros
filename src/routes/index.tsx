@@ -266,6 +266,72 @@ function Index() {
         </div>
       </Section>
 
+      {/* INVESTMENT SUMMARY */}
+      <Section id="summary" className="bg-ink text-cream">
+        <div className="grid md:grid-cols-12 gap-10">
+          <div className="md:col-span-4">
+            <div className="kicker !text-lemon">{t("summaryKicker")}</div>
+            <h2 className="font-display text-4xl md:text-6xl leading-[1.05] mt-4 text-cream">{t("summaryTitle")}</h2>
+            <p className="mt-6 text-sm text-cream/70 font-light leading-relaxed">{t("summaryNote")}</p>
+            <div className="mt-10 border-t border-cream/15 pt-6">
+              <div className="kicker !text-lemon">{t("summaryTotal")}</div>
+              <div className="font-display text-4xl md:text-5xl text-lemon mt-3">{t("summaryTotalPrice")}</div>
+            </div>
+          </div>
+          <div className="md:col-span-7 md:col-start-6">
+            <ul className="divide-y divide-cream/15">
+              {[
+                {
+                  l: lang === "en" ? "Photography & videography" : "Φωτογραφία & βιντεογράφηση",
+                  p: "€3,000–4,500",
+                },
+                {
+                  l: lang === "en" ? "DJ & music" : "DJ & μουσική",
+                  p: "€1,000–2,050",
+                },
+                {
+                  l: lang === "en" ? "Flowers & decorations" : "Λουλούδια & στολισμός",
+                  p: "€1,500–4,000",
+                },
+                {
+                  l: lang === "en" ? "Catering (~80 guests)" : "Catering (~80 άτομα)",
+                  p: "€4,400–8,000",
+                },
+                {
+                  l: lang === "en" ? "  + optional yard (Souvlaki Club)" : "  + προαιρετική αυλή (Souvlaki Club)",
+                  p: "€2,000",
+                  sub: true,
+                },
+                {
+                  l: "Wedding planner",
+                  p: "€2,000",
+                },
+                {
+                  l: lang === "en" ? "Wedding cake" : "Γαμήλια τούρτα",
+                  p: "€200–500",
+                },
+                {
+                  l: lang === "en" ? "Sweets (~80 guests)" : "Γλυκά (~80 άτομα)",
+                  p: "€240–400",
+                },
+                {
+                  l: lang === "en" ? "Ceremony essentials" : "Βασικά τελετής",
+                  p: "€650–1,600",
+                },
+              ].map((r) => (
+                <li
+                  key={r.l}
+                  className={`py-4 flex items-baseline justify-between gap-4 ${r.sub ? "opacity-70 text-sm" : ""}`}
+                >
+                  <span className="text-cream/90">{r.l}</span>
+                  <span className="font-display text-xl text-lemon whitespace-nowrap">{r.p}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </Section>
+
       {/* CTA STRIP */}
       <Section className="bg-terracotta text-cream">
         <div className="text-center max-w-2xl mx-auto">

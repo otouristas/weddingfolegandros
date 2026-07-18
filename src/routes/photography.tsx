@@ -136,7 +136,7 @@ function PhotographyPage() {
                 "Tselina Tselou",
                 "Pick a Bliss",
                 "Nikos Mulonas",
-                "Eva Rendi",
+                "Eva Rendl",
                 "Lighthouse Photography",
               ].map((n) => (
                 <li key={n} className="font-display text-2xl border-b border-border pb-2">
@@ -146,6 +146,176 @@ function PhotographyPage() {
             </ul>
           </div>
         </div>
+      </Section>
+
+      <Section className="bg-secondary/60">
+        <div className="max-w-3xl">
+          <SectionKicker>Eva Rendl</SectionKicker>
+          <SectionTitle>
+            {en ? "Elopements & micro-weddings 2026–27" : "Elopements & micro-weddings 2026–27"}
+          </SectionTitle>
+          <p className="mt-4 text-ink/80 font-light leading-relaxed">
+            {en
+              ? "Santorini-based · packages for up to 15 guests. Destination travel fees may apply outside Santorini."
+              : "Βάση στη Σαντορίνη · πακέτα έως 15 καλεσμένους. Εκτός Σαντορίνης ενδέχεται να ισχύουν έξοδα μετακίνησης."}
+          </p>
+        </div>
+        <ul className="mt-10 divide-y divide-border max-w-3xl">
+          {[
+            {
+              l: en ? "4 hours coverage" : "Κάλυψη 4 ωρών",
+              p: "€1,600 + VAT",
+            },
+            {
+              l: en ? "5 hours coverage" : "Κάλυψη 5 ωρών",
+              p: "€2,000 + VAT",
+            },
+            {
+              l: en ? "Additional hour" : "Επιπλέον ώρα",
+              p: "€250 + VAT",
+            },
+            {
+              l: en ? "Wedding book — Mini / Standard / Luxe" : "Wedding book — Mini / Standard / Luxe",
+              p: "€600 / €900 / €1,500",
+            },
+          ].map((r) => (
+            <li key={r.l} className="py-4 flex items-baseline justify-between gap-4">
+              <span className="text-ink/85">{r.l}</span>
+              <span className="font-display text-xl text-terracotta whitespace-nowrap">{r.p}</span>
+            </li>
+          ))}
+        </ul>
+        <p className="mt-6 text-sm text-ink/65 font-light max-w-3xl">
+          {en
+            ? "Includes preparation, ceremony, couple portraits, reception highlights, teaser within 1 week, private online gallery and printing rights. Album prices include VAT."
+            : "Περιλαμβάνει προετοιμασία, τελετή, πορτραίτα ζευγαριού, highlights δεξίωσης, teaser σε 1 εβδομάδα, ιδιωτική online gallery και δικαιώματα εκτύπωσης. Οι τιμές album περιλαμβάνουν ΦΠΑ."}
+        </p>
+        <a
+          href="https://www.evarendl.com/elopementphotographyprices2026-2027"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex mt-8 text-sm tracking-[0.2em] uppercase text-terracotta hover:opacity-70 transition-opacity"
+        >
+          {en ? "Full pricing →" : "Πλήρης τιμοκατάλογος →"}
+        </a>
+      </Section>
+
+      <Section className="bg-ink text-cream">
+        <div className="max-w-3xl">
+          <div className="kicker !text-lemon">Lighthouse Photography</div>
+          <h2 className="font-display text-4xl md:text-6xl leading-[1.05] mt-4 text-cream">
+            {en ? "Pricing 2026–27 · Teo & Anna" : "Τιμές 2026–27 · Teo & Anna"}
+          </h2>
+          <p className="mt-4 text-cream/75 font-light leading-relaxed">
+            {en
+              ? "Travel inside Greece included · 24% VAT not included."
+              : "Μετακινήσεις εντός Ελλάδας συμπεριλαμβάνονται · ΦΠΑ 24% δεν περιλαμβάνεται."}
+          </p>
+        </div>
+
+        <div className="mt-12 grid md:grid-cols-3 gap-6">
+          {[
+            {
+              name: "Classic",
+              price: "€2,900",
+              items: en
+                ? [
+                    "1 photographer — Teo or Anna",
+                    "8 hours coverage",
+                    "700 high-res digital files",
+                    "Online gallery · 6 months",
+                    "Preview gallery (30 images) in a week",
+                  ]
+                : [
+                    "1 φωτογράφος — Teo ή Anna",
+                    "8 ώρες κάλυψης",
+                    "700 high-res ψηφιακά αρχεία",
+                    "Online gallery · 6 μήνες",
+                    "Preview gallery (30 φωτογραφίες) σε μία εβδομάδα",
+                  ],
+            },
+            {
+              name: "Signature",
+              price: "€5,300",
+              items: en
+                ? [
+                    "1 photographer + 1 videographer",
+                    "9 hours coverage",
+                    "900 high-res digital files",
+                    "15–20′ wedding film · 1–2′ short",
+                    "Drone · gallery 12 months",
+                  ]
+                : [
+                    "1 φωτογράφος + 1 βιντεογράφος",
+                    "9 ώρες κάλυψης",
+                    "900 high-res ψηφιακά αρχεία",
+                    "Wedding film 15–20′ · short 1–2′",
+                    "Drone · gallery 12 μήνες",
+                  ],
+            },
+            {
+              name: "Grande",
+              price: "€6,500",
+              items: en
+                ? [
+                    "Photo + video + drone",
+                    "Content creator",
+                    "Analog film (80–100 images)",
+                    "Fast gallery delivery (4 weeks)",
+                    "Consultation & 12-month gallery",
+                  ]
+                : [
+                    "Φωτογραφία + βίντεο + drone",
+                    "Content creator",
+                    "Analog film (80–100 φωτογραφίες)",
+                    "Γρήγορη παράδοση gallery (4 εβδομάδες)",
+                    "Consultation & gallery 12 μηνών",
+                  ],
+            },
+          ].map((pkg) => (
+            <div key={pkg.name} className="border border-cream/15 p-8">
+              <div className="kicker !text-lemon">{pkg.name}</div>
+              <div className="font-display text-4xl text-lemon mt-3">{pkg.price}</div>
+              <ul className="mt-6 space-y-2 text-sm text-cream/80">
+                {pkg.items.map((item) => (
+                  <li key={item} className="flex gap-3">
+                    <span className="mt-2 h-px w-3 bg-lemon shrink-0" />
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-12 max-w-3xl">
+          <div className="kicker !text-lemon">{en ? "Add-ons" : "Πρόσθετα"}</div>
+          <ul className="mt-6 divide-y divide-cream/15">
+            {[
+              { l: en ? "Second photographer / videographer" : "Δεύτερος φωτογράφος / βιντεογράφος", p: "€1,000" },
+              { l: en ? "Extra day photoshoot (3 hours)" : "Extra day photoshoot (3 ώρες)", p: "€900" },
+              { l: en ? "Additional hour of coverage" : "Επιπλέον ώρα κάλυψης", p: "€200" },
+              { l: en ? "Raw files (unedited)" : "Raw αρχεία (χωρίς επεξεργασία)", p: "€700" },
+              { l: en ? "Fast gallery delivery (4 weeks)" : "Γρήγορη παράδοση gallery (4 εβδομάδες)", p: "€700" },
+              { l: en ? "Content creation" : "Content creation", p: "€900" },
+              { l: en ? "Analog film photos (80–100)" : "Analog film (80–100 φωτογραφίες)", p: "€500" },
+            ].map((r) => (
+              <li key={r.l} className="py-3 flex items-baseline justify-between gap-4">
+                <span className="text-cream/85">{r.l}</span>
+                <span className="font-display text-xl text-lemon whitespace-nowrap">{r.p}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+
+        <a
+          href="https://lighthousephotography.pic-time.com/-pricing2025/slidesblog/68ffa8f80743d3e2394b8412"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex mt-10 text-sm tracking-[0.2em] uppercase text-lemon hover:opacity-70 transition-opacity"
+        >
+          {en ? "Full pricing →" : "Πλήρης τιμοκατάλογος →"}
+        </a>
       </Section>
 
       <Footer />

@@ -67,6 +67,15 @@ export const t: Dict = {
   vendorsKicker: { en: "The team", el: "Η ομάδα" },
   vendorsTitle: { en: "Vendors", el: "Συνεργάτες" },
 
+  summaryKicker: { en: "At a glance", el: "Με μια ματιά" },
+  summaryTitle: { en: "Investment summary", el: "Σύνοψη επένδυσης" },
+  summaryNote: {
+    en: "Indicative ranges for ~80 guests. Final total depends on the options you choose.",
+    el: "Ενδεικτικά εύρη για ~80 καλεσμένους. Το τελικό σύνολο εξαρτάται από τις επιλογές σας.",
+  },
+  summaryTotal: { en: "Indicative core range", el: "Ενδεικτικό εύρος βασικών" },
+  summaryTotalPrice: { en: "€13,000–25,000", el: "13.000–25.000€" },
+
   planKicker: { en: "Ready when you are", el: "Έτοιμοι όταν είστε" },
   planTitle: { en: "Let's plan your day", el: "Ας σχεδιάσουμε τη μέρα σας" },
   planBody: {
