@@ -3,7 +3,7 @@ import { useT } from "@/lib/i18n";
 import { useLang } from "@/hooks/use-language";
 import { Section, SectionKicker, SectionTitle } from "@/components/site/Section";
 import { Footer } from "@/components/site/Footer";
-import heroAsset from "@/assets/hero-table.png.asset.json";
+import hero from "@/assets/hero-table.png";
 import lemons from "@/assets/lemons.jpg";
 import folegandros from "@/assets/folegandros.jpg";
 import olive from "@/assets/olive.jpg";
@@ -35,11 +35,11 @@ function Index() {
       {/* HERO */}
       <section className="relative h-[100svh] min-h-[640px] w-full overflow-hidden">
         <img
-          src={heroAsset.url}
+          src={hero}
           alt="Folegandros wedding table"
           className="absolute inset-0 h-full w-full object-cover"
-          width={1200}
-          height={2000}
+          width={883}
+          height={1920}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-ink/30 via-ink/10 to-ink/70" />
         <div className="relative z-10 h-full flex flex-col justify-end pb-24 px-6 md:px-14 max-w-[1400px] mx-auto">
