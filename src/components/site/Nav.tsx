@@ -1,11 +1,15 @@
+import { useState } from "react";
 import { Link, useRouterState } from "@tanstack/react-router";
+import { Menu } from "lucide-react";
 import { LangToggle } from "./LangToggle";
 import { useT } from "@/lib/i18n";
+import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 
 export function Nav() {
   const t = useT();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const isHome = pathname === "/";
+  const [open, setOpen] = useState(false);
 
   const links: Array<{ to: "/" | "/photography" | "/vendors" | "/logistics" | "/menu"; key: Parameters<typeof t>[0] }> = [
     { to: "/", key: "navHome" },
@@ -38,7 +42,43 @@ export function Nav() {
             </Link>
           ))}
         </nav>
-        <LangToggle />
+        <div className="flex items-center gap-3">
+          <LangToggle />
+          <Sheet open={open} onOpenChange={setOpen}>
+            <SheetTrigger asChild>
+              <button
+                type="button"
+                className={`md:hidden inline-flex items-center justify-center p-1.5 -mr-1.5 transition-opacity hover:opacity-70 ${
+                  isHome ? "text-cream" : "text-ink"
+                }`}
+                aria-label="Open menu"
+              >
+                <Menu className="h-5 w-5" />
+              </button>
+            </SheetTrigger>
+            <SheetContent side="right" className="bg-cream border-border w-[min(100%,20rem)]">
+              <SheetHeader>
+                <SheetTitle className="font-display text-ink text-left text-lg font-medium tracking-tight">
+                  M <span className="opacity-50">&</span> T
+                </SheetTitle>
+              </SheetHeader>
+              <nav className="mt-8 flex flex-col gap-6 text-[15px] tracking-wide text-ink/80">
+                {links.map((l) => (
+                  <Link
+                    key={l.to}
+                    to={l.to}
+                    onClick={() => setOpen(false)}
+                    className="hover:opacity-70 transition-opacity"
+                    activeOptions={{ exact: true }}
+                    activeProps={{ className: "opacity-100 underline underline-offset-8 decoration-terracotta text-ink" }}
+                  >
+                    {t(l.key)}
+                  </Link>
+                ))}
+              </nav>
+            </SheetContent>
+          </Sheet>
+        </div>
       </div>
     </header>
   );
