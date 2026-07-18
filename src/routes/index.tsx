@@ -371,12 +371,6 @@ function Index() {
           width={1600}
           height={1000}
         />
-        <div className="absolute inset-0 bg-ink/20" />
-        <div className="relative z-10 h-full flex items-center justify-center">
-          <div className="font-display italic text-cream text-4xl md:text-6xl text-center px-6">
-            "καλῶς ἤλθατε"
-          </div>
-        </div>
       </div>
 
       <Footer />

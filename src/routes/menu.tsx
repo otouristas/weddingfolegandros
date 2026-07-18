@@ -147,12 +147,6 @@ export function MenuPage() {
 
       <div className="relative h-72 overflow-hidden">
         <img src={lemons} alt="" className="absolute inset-0 h-full w-full object-cover" loading="lazy" width={1600} height={1000} />
-        <div className="absolute inset-0 bg-ink/25" />
-        <div className="relative z-10 h-full flex items-center justify-center">
-          <div className="font-display italic text-cream text-3xl md:text-5xl">
-            {en ? "στην υγειά σας" : "στην υγειά σας"}
-          </div>
-        </div>
       </div>
 
       <Footer />
