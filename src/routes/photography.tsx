@@ -135,7 +135,7 @@ function PhotographyPage() {
                 "Roula Moniaki",
                 "Tselina Tselou",
                 "Pick a Bliss",
-                "Nikos Mulonas",
+                "Nikos Mylonas — Love & Roll",
                 "Eva Rendl",
                 "Lighthouse Photography",
               ].map((n) => (
@@ -148,6 +148,73 @@ function PhotographyPage() {
         </div>
       </Section>
 
+      <Section className="bg-ink text-cream">
+        <div className="max-w-3xl">
+          <div className="kicker !text-lemon">{en ? "Partner photographers" : "Συνεργάτες φωτογράφοι"}</div>
+          <h2 className="font-display text-4xl md:text-6xl leading-[1.05] mt-4 text-cream">
+            {en ? "Who they are" : "Ποιοι είναι"}
+          </h2>
+          <p className="mt-4 text-cream/75 font-light leading-relaxed">
+            {en
+              ? "Recommended partners for Folegandros — short notes from their own about pages."
+              : "Προτεινόμενοι συνεργάτες για τη Φολέγανδρο — σύντομα σημειώματα από τις σελίδες τους."}
+          </p>
+        </div>
+
+        <div className="mt-14 space-y-14 max-w-3xl">
+          {[
+            {
+              name: "Eva Rendl",
+              role: en ? "Santorini wedding & elopement photographer" : "Wedding & elopement φωτογράφος · Σαντορίνη",
+              body: en
+                ? "Picked up a camera in Sweden; found her subject in Santorini after first visiting in 2008 and never really leaving — met her husband, built a family, and has photographed weddings and couples across Greece for the past nine years. Quiet, instinctive approach: she watches and waits rather than directing every moment. Travels to Folegandros and the smaller Cyclades for weddings and elopements."
+                : "Ξεκίνησε στη Σουηδία· βρήκε το θέμα της στη Σαντορίνη μετά την πρώτη επίσκεψη το 2008 και ουσιαστικά δεν έφυγε ποτέ — γνώρισε τον άντρα της, έφτιαξε οικογένεια και φωτογραφίζει γάμους και ζευγάρια στην Ελλάδα τα τελευταία εννέα χρόνια. Ήσυχη, ενστικτώδης προσέγγιση: παρατηρεί και περιμένει αντί να σκηνοθετεί κάθε στιγμή. Ταξιδεύει στη Φολέγανδρο και στις μικρές Κυκλάδες για γάμους και elopements.",
+              href: "https://www.evarendl.com/about",
+              contact: "weddings@evarendl.com",
+            },
+            {
+              name: "Lighthouse Photography",
+              role: en ? "Teo & Anna — photographers, wanderers, parents" : "Teo & Anna — φωτογράφοι, ταξιδιώτες, γονείς",
+              body: en
+                ? "Partners in life and work for 13 years. Based in Greece, they travel widely and document weddings and elopements with respect and discretion — artistic, elegant storytelling rather than staged intrusion. Coffee addicts, music lovers, always packed and ready to go wherever the day calls."
+                : "Συνεργάτες στη ζωή και στη δουλειά εδώ και 13 χρόνια. Με βάση την Ελλάδα, ταξιδεύουν και καλύπτουν γάμους και elopements με σεβασμό και διακριτικότητα — καλλιτεχνική, κομψή αφήγηση, όχι σκηνοθετημένη εισβολή. Λάτρεις του καφέ και της μουσικής, πάντα έτοιμοι να φύγουν όπου τους καλέσει η μέρα.",
+              href: "https://lighthousephotography.gr/about-us/",
+              contact: null,
+            },
+            {
+              name: "Love & Roll Weddings",
+              role: en ? "Nikos Mylonas — destination wedding photography, Greece" : "Nikos Mylonas — destination wedding photography, Ελλάδα",
+              body: en
+                ? "Photography and music have shaped him since he was young. He started with a DSLR at 17 and calls himself a “moments’ hunter” — creator, narrator and director of wedding stories. With his team he collects the details couples want kept forever across destination weddings in Greece."
+                : "Η φωτογραφία και η μουσική τον διαμόρφωσαν από μικρός. Ξεκίνησε με DSLR στα 17 και αυτοαποκαλείται «κυνηγός στιγμών» — δημιουργός, αφηγητής και σκηνοθέτης ιστοριών γάμου. Με την ομάδα του μαζεύει τις λεπτομέρειες που τα ζευγάρια θέλουν να κρατήσουν για πάντα σε destination weddings στην Ελλάδα.",
+              href: "https://loveandrollweddings.com/about-us/",
+              contact: "info@loveandrollweddings.com",
+            },
+          ].map((p) => (
+            <div key={p.name} className="border-t border-cream/15 pt-8">
+              <h3 className="font-display text-3xl md:text-4xl text-cream">{p.name}</h3>
+              <p className="mt-2 text-sm tracking-[0.15em] uppercase text-lemon">{p.role}</p>
+              <p className="mt-5 text-cream/80 font-light leading-relaxed">{p.body}</p>
+              <div className="mt-5 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+                <a
+                  href={p.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="tracking-[0.2em] uppercase text-lemon hover:opacity-70 transition-opacity"
+                >
+                  {en ? "About →" : "About →"}
+                </a>
+                {p.contact && (
+                  <a href={`mailto:${p.contact}`} className="text-cream/70 hover:text-cream transition-colors">
+                    {p.contact}
+                  </a>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </Section>
+
       <Section className="bg-secondary/60">
         <div className="max-w-3xl">
           <SectionKicker>Eva Rendl</SectionKicker>
@@ -156,8 +223,8 @@ function PhotographyPage() {
           </SectionTitle>
           <p className="mt-4 text-ink/80 font-light leading-relaxed">
             {en
-              ? "Santorini-based · packages for up to 15 guests. Destination travel fees may apply outside Santorini."
-              : "Βάση στη Σαντορίνη · πακέτα έως 15 καλεσμένους. Εκτός Σαντορίνης ενδέχεται να ισχύουν έξοδα μετακίνησης."}
+              ? "Santorini-based · also travels to Folegandros · packages for up to 15 guests. Destination travel fees may apply outside Santorini."
+              : "Βάση στη Σαντορίνη · ταξιδεύει και στη Φολέγανδρο · πακέτα έως 15 καλεσμένους. Εκτός Σαντορίνης ενδέχεται να ισχύουν έξοδα μετακίνησης."}
           </p>
         </div>
         <ul className="mt-10 divide-y divide-border max-w-3xl">
@@ -190,14 +257,24 @@ function PhotographyPage() {
             ? "Includes preparation, ceremony, couple portraits, reception highlights, teaser within 1 week, private online gallery and printing rights. Album prices include VAT."
             : "Περιλαμβάνει προετοιμασία, τελετή, πορτραίτα ζευγαριού, highlights δεξίωσης, teaser σε 1 εβδομάδα, ιδιωτική online gallery και δικαιώματα εκτύπωσης. Οι τιμές album περιλαμβάνουν ΦΠΑ."}
         </p>
-        <a
-          href="https://www.evarendl.com/elopementphotographyprices2026-2027"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex mt-8 text-sm tracking-[0.2em] uppercase text-terracotta hover:opacity-70 transition-opacity"
-        >
-          {en ? "Full pricing →" : "Πλήρης τιμοκατάλογος →"}
-        </a>
+        <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2">
+          <a
+            href="https://www.evarendl.com/elopementphotographyprices2026-2027"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex text-sm tracking-[0.2em] uppercase text-terracotta hover:opacity-70 transition-opacity"
+          >
+            {en ? "Full pricing →" : "Πλήρης τιμοκατάλογος →"}
+          </a>
+          <a
+            href="https://www.evarendl.com/about"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex text-sm tracking-[0.2em] uppercase text-ink/50 hover:text-terracotta transition-colors"
+          >
+            {en ? "About →" : "About →"}
+          </a>
+        </div>
       </Section>
 
       <Section className="bg-ink text-cream">
@@ -308,14 +385,57 @@ function PhotographyPage() {
           </ul>
         </div>
 
-        <a
-          href="https://lighthousephotography.pic-time.com/-pricing2025/slidesblog/68ffa8f80743d3e2394b8412"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex mt-10 text-sm tracking-[0.2em] uppercase text-lemon hover:opacity-70 transition-opacity"
-        >
-          {en ? "Full pricing →" : "Πλήρης τιμοκατάλογος →"}
-        </a>
+        <div className="mt-10 flex flex-wrap gap-x-6 gap-y-2">
+          <a
+            href="https://lighthousephotography.pic-time.com/-pricing2025/slidesblog/68ffa8f80743d3e2394b8412"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex text-sm tracking-[0.2em] uppercase text-lemon hover:opacity-70 transition-opacity"
+          >
+            {en ? "Full pricing →" : "Πλήρης τιμοκατάλογος →"}
+          </a>
+          <a
+            href="https://lighthousephotography.gr/about-us/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex text-sm tracking-[0.2em] uppercase text-cream/50 hover:text-lemon transition-colors"
+          >
+            {en ? "About →" : "About →"}
+          </a>
+        </div>
+      </Section>
+
+      <Section>
+        <div className="max-w-3xl">
+          <SectionKicker>Love & Roll Weddings</SectionKicker>
+          <SectionTitle>Nikos Mylonas</SectionTitle>
+          <p className="mt-4 text-ink/80 font-light leading-relaxed">
+            {en
+              ? "Destination wedding photographer in Greece — Fearless Photographers award winner and Couples Choice / WeddingWire featured. Contact for a tailored Folegandros package."
+              : "Destination wedding φωτογράφος στην Ελλάδα — Fearless Photographers award winner και Couples Choice / WeddingWire. Επικοινωνήστε για προσαρμοσμένο πακέτο Φολεγάνδρου."}
+          </p>
+          <div className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm">
+            <a
+              href="https://loveandrollweddings.com/about-us/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tracking-[0.2em] uppercase text-terracotta hover:opacity-70 transition-opacity"
+            >
+              {en ? "About →" : "About →"}
+            </a>
+            <a
+              href="https://loveandrollweddings.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="tracking-[0.2em] uppercase text-ink/50 hover:text-terracotta transition-colors"
+            >
+              loveandrollweddings.com →
+            </a>
+            <a href="mailto:info@loveandrollweddings.com" className="text-ink/70 hover:text-ink transition-colors">
+              info@loveandrollweddings.com
+            </a>
+          </div>
+        </div>
       </Section>
 
       <Footer />
