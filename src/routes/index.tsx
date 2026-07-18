@@ -18,7 +18,7 @@ export const Route = createFileRoute("/")({
         content:
           "A curated wedding proposal for a Cycladic celebration — photography, videography, vendors, travel and menu.",
       },
-      { property: "og:title", content: "Mafalda & Thanos — Folegandros Wedding 2027" },
+      { property: "og:title", content: "Mafalda & Thanos — Folegandros Wedding, 21 August 2027" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],

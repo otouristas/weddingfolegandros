@@ -60,19 +60,23 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Mafalda & Thanos — Folegandros Wedding 2027" },
+      { title: "Mafalda & Thanos — Folegandros Wedding, 21 August 2027" },
       {
         name: "description",
         content:
-          "A bilingual wedding proposal for Mafalda & Thanos, Folegandros, 21 August 2027 — photography, videography, vendors, travel and menu.",
+          "A curated wedding proposal for a Cycladic celebration — photography, videography, vendors, travel and menu.",
       },
-      { property: "og:title", content: "Mafalda & Thanos — Folegandros Wedding 2027" },
+      { property: "og:title", content: "Mafalda & Thanos — Folegandros Wedding, 21 August 2027" },
       {
         property: "og:description",
-        content: "A complete Cycladic wedding proposal — photography, vendors, travel and menu.",
+        content: "A curated wedding proposal for a Cycladic celebration — photography, videography, vendors, travel and menu.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Mafalda & Thanos — Folegandros Wedding, 21 August 2027" },
+      { name: "twitter:description", content: "A curated wedding proposal for a Cycladic celebration — photography, videography, vendors, travel and menu." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/979817d3-f4c9-45dc-9ec5-aa2a83d01c4c/id-preview-dc48328e--79e629ca-5797-495f-aea9-09aa7a2de3b1.lovable.app-1784360996495.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/979817d3-f4c9-45dc-9ec5-aa2a83d01c4c/id-preview-dc48328e--79e629ca-5797-495f-aea9-09aa7a2de3b1.lovable.app-1784360996495.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
