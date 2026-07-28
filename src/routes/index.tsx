@@ -12,13 +12,13 @@ import ceremony from "@/assets/ceremony.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rafaela & Thanos" },
+      { title: "Rafaela & Paraskevas" },
       {
         name: "description",
         content:
           "A curated wedding proposal for a Cycladic celebration — photography, videography, vendors, travel and menu.",
       },
-      { property: "og:title", content: "Rafaela & Thanos" },
+      { property: "og:title", content: "Rafaela & Paraskevas" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -50,7 +50,7 @@ function Index() {
             <h1 className="font-display font-light text-6xl md:text-[9rem] leading-[0.95] tracking-tight">
               Rafaela
               <span className="italic font-normal text-lemon"> & </span>
-              Thanos
+              Paraskevas
             </h1>
             <div className="mt-6 max-w-xl text-lg md:text-xl text-cream/85 font-light">
               {t("heroSubtitle")}

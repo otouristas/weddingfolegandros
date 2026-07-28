@@ -6,7 +6,7 @@ export function Footer() {
     <footer className="border-t border-border mt-24">
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 py-12 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-muted-foreground">
         <div className="font-display text-xl text-ink">
-          Rafaela <span className="text-terracotta">&</span> Thanos
+          Rafaela <span className="text-terracotta">&</span> Paraskevas
         </div>
         <div className="text-xs tracking-[0.2em] uppercase">{t("footerNote")}</div>
         <a

@@ -9,9 +9,9 @@ import { galleryPhotos, GALLERY_CREDIT } from "@/lib/gallery";
 export const Route = createFileRoute("/gallery")({
   head: () => ({
     meta: [
-      { title: "Gallery — Rafaela & Thanos" },
+      { title: "Gallery — Rafaela & Paraskevas" },
       { name: "description", content: "Folegandros island gallery — landscapes, beaches and village moments." },
-      { property: "og:title", content: "Gallery — Rafaela & Thanos" },
+      { property: "og:title", content: "Gallery — Rafaela & Paraskevas" },
       { property: "og:url", content: "/gallery" },
     ],
     links: [{ rel: "canonical", href: "/gallery" }],

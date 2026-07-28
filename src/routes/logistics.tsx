@@ -7,9 +7,9 @@ import folegandros from "@/assets/folegandros.jpg";
 export const Route = createFileRoute("/logistics")({
   head: () => ({
     meta: [
-      { title: "Travel & Stay — Rafaela & Thanos" },
+      { title: "Travel & Stay — Rafaela & Paraskevas" },
       { name: "description", content: "Boat tickets, hotels, on-island transportation and boat tour for the Folegandros wedding." },
-      { property: "og:title", content: "Travel & Stay — Rafaela & Thanos" },
+      { property: "og:title", content: "Travel & Stay — Rafaela & Paraskevas" },
       { property: "og:url", content: "/logistics" },
     ],
     links: [{ rel: "canonical", href: "/logistics" }],

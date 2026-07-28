@@ -10,7 +10,7 @@ export const t: Dict = {
   navLogistics: { en: "Travel & Stay", el: "Ταξίδι & Διαμονή" },
 
   heroKicker: { en: "Folegandros · 21 August 2027", el: "Φολέγανδρος · 21 Αυγούστου 2027" },
-  heroTitle: { en: "Rafaela & Thanos", el: "Ραφαέλα & Θάνος" },
+  heroTitle: { en: "Rafaela & Paraskevas", el: "Ραφαέλα & Παρασκευάς" },
   heroSubtitle: {
     en: "A Cycladic wedding — curated, cinematic, unforgettable.",
     el: "Ένας γάμος στις Κυκλάδες — φροντισμένος, κινηματογραφικός, αξέχαστος.",
@@ -85,7 +85,7 @@ export const t: Dict = {
     el: "Το έγγραφο αυτό είναι σημείο εκκίνησης. Κάθε στοιχείο προσαρμόζεται στη δική σας εικόνα. Επικοινωνήστε μαζί μας για να το διαμορφώσουμε μαζί.",
   },
   contactBtn: { en: "Portfolio", el: "Portfolio" },
-  footerNote: { en: "Prepared with care for Rafaela & Thanos", el: "Με φροντίδα για τους Ραφαέλα & Θάνος" },
+  footerNote: { en: "Prepared with care for Rafaela & Paraskevas", el: "Με φροντίδα για τους Ραφαέλα & Παρασκευάς" },
 };
 
 export function useT() {

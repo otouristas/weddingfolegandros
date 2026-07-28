@@ -60,20 +60,20 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Rafaela & Thanos" },
+      { title: "Rafaela & Paraskevas" },
       {
         name: "description",
         content:
           "A curated wedding proposal for a Cycladic celebration — photography, videography, vendors and travel.",
       },
-      { property: "og:title", content: "Rafaela & Thanos" },
+      { property: "og:title", content: "Rafaela & Paraskevas" },
       {
         property: "og:description",
         content: "A curated wedding proposal for a Cycladic celebration — photography, videography, vendors and travel.",
       },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:title", content: "Rafaela & Thanos" },
+      { name: "twitter:title", content: "Rafaela & Paraskevas" },
       { name: "twitter:description", content: "A curated wedding proposal for a Cycladic celebration — photography, videography, vendors and travel." },
       { property: "og:image", content: "https://weddingfolegandros.lovable.app/og-image.png" },
       { name: "twitter:image", content: "https://weddingfolegandros.lovable.app/og-image.png" },

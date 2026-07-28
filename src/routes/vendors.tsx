@@ -6,9 +6,9 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/vendors")({
   head: () => ({
     meta: [
-      { title: "Vendors — Rafaela & Thanos" },
+      { title: "Vendors — Rafaela & Paraskevas" },
       { name: "description", content: "DJ, flowers, hair & makeup, wedding planner, cake and sweets for the Folegandros wedding." },
-      { property: "og:title", content: "Vendors — Rafaela & Thanos" },
+      { property: "og:title", content: "Vendors — Rafaela & Paraskevas" },
       { property: "og:url", content: "/vendors" },
     ],
     links: [{ rel: "canonical", href: "/vendors" }],

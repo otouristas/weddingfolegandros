@@ -1,4 +1,4 @@
-# Wedding Offer Presentation — Mafalda & Thanos, Folegandros 2027
+# Wedding Offer Presentation — Rafaela & Paraskevas, Folegandros 2027
 
 A bilingual (EN/GR) single-site web presentation styled like an editorial Mediterranean lookbook — lemons, olive, warm terracotta, whitewashed Cycladic feel — inspired by the reference table image and the pricing pages you shared (lighthousephotography / evarendl).
 
@@ -17,7 +17,7 @@ Each route has its own `head()` metadata (title, description, og:title/descripti
 
 1. **Hero** — Full-bleed image of the table (from IMG_9895.png), overlaid with:
    - Kicker: "FOLEGANDROS · 21 AUGUST 2027"
-   - Title (serif display): "Mafalda & Thanos"
+   - Title (serif display): "Rafaela & Paraskevas"
    - Subtitle: "A Cycladic wedding — curated, cinematic, unforgettable"
    - EN/GR toggle top-right
 2. **Invitation letter** — Warm intro paragraph, personal tone
