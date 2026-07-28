@@ -12,13 +12,13 @@ import ceremony from "@/assets/ceremony.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Rafaela & Thanos — Folegandros Wedding, 21 August 2027" },
+      { title: "Rafaela & Thanos" },
       {
         name: "description",
         content:
           "A curated wedding proposal for a Cycladic celebration — photography, videography, vendors, travel and menu.",
       },
-      { property: "og:title", content: "Rafaela & Thanos — Folegandros Wedding, 21 August 2027" },
+      { property: "og:title", content: "Rafaela & Thanos" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
