@@ -12,13 +12,13 @@ import ceremony from "@/assets/ceremony.jpg";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Mafalda & Thanos — Folegandros Wedding, 21 August 2027" },
+      { title: "Rafaela & Thanos — Folegandros Wedding, 21 August 2027" },
       {
         name: "description",
         content:
           "A curated wedding proposal for a Cycladic celebration — photography, videography, vendors, travel and menu.",
       },
-      { property: "og:title", content: "Mafalda & Thanos — Folegandros Wedding, 21 August 2027" },
+      { property: "og:title", content: "Rafaela & Thanos — Folegandros Wedding, 21 August 2027" },
       { property: "og:url", content: "/" },
     ],
     links: [{ rel: "canonical", href: "/" }],
@@ -48,7 +48,7 @@ function Index() {
               {t("heroKicker")}
             </div>
             <h1 className="font-display font-light text-6xl md:text-[9rem] leading-[0.95] tracking-tight">
-              Mafalda
+              Rafaela
               <span className="italic font-normal text-lemon"> & </span>
               Thanos
             </h1>
@@ -179,35 +179,14 @@ function Index() {
 
       {/* HOTELS */}
       <Section id="hotels">
-        <div className="grid md:grid-cols-12 gap-10 mb-14">
+        <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
             <SectionKicker>{t("hotelsKicker")}</SectionKicker>
             <SectionTitle>{t("hotelsTitle")}</SectionTitle>
           </div>
           <div className="md:col-span-6 md:col-start-7 flex items-end">
-            <p className="text-sm text-muted-foreground tracking-wide">{t("hotelsNote")}</p>
+            <p className="text-sm text-muted-foreground tracking-wide leading-relaxed">{t("hotelsNote")}</p>
           </div>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8">
-          {[
-            { name: "Anemomilos", note: t("hotelBrideNote") },
-            { name: "Chora Resort" },
-            { name: "Aria Boutique Hotel" },
-            { name: "Marine" },
-            { name: "Horizon" },
-            { name: "Kifines Suites" },
-            { name: "Avaton" },
-            { name: "Eygenia Rooms" },
-          ].map((h, i) => (
-            <div key={h.name} className="border-t border-border pt-4">
-              <div className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground">
-                {String(i + 1).padStart(2, "0")}
-              </div>
-              <div className="font-display text-2xl mt-2 text-ink">{h.name}</div>
-              {h.note && <div className="text-xs text-terracotta mt-2 leading-relaxed">{h.note}</div>}
-            </div>
-          ))}
         </div>
       </Section>
 
@@ -315,17 +294,8 @@ function Index() {
                   p: "€1,500–4,000",
                 },
                 {
-                  l: lang === "en" ? "Catering (~80 guests)" : "Catering (~80 άτομα)",
-                  p: "€4,400–8,000",
-                },
-                {
-                  l: lang === "en" ? "  + optional yard (Souvlaki Club)" : "  + προαιρετική αυλή (Souvlaki Club)",
-                  p: "€2,000",
-                  sub: true,
-                },
-                {
                   l: "Wedding planner",
-                  p: "€2,000",
+                  p: "€1,500",
                 },
                 {
                   l: lang === "en" ? "Wedding cake" : "Γαμήλια τούρτα",
@@ -342,7 +312,7 @@ function Index() {
               ].map((r) => (
                 <li
                   key={r.l}
-                  className={`py-4 flex items-baseline justify-between gap-4 ${r.sub ? "opacity-70 text-sm" : ""}`}
+                  className="py-4 flex items-baseline justify-between gap-4"
                 >
                   <span className="text-cream/90">{r.l}</span>
                   <span className="font-display text-xl text-lemon whitespace-nowrap">{r.p}</span>
@@ -365,12 +335,6 @@ function Index() {
               className="rounded-full bg-cream text-ink px-6 py-3 text-xs tracking-[0.25em] uppercase hover:bg-lemon transition-colors"
             >
               {t("navVendors")}
-            </Link>
-            <Link
-              to="/menu"
-              className="rounded-full border border-cream/60 text-cream px-6 py-3 text-xs tracking-[0.25em] uppercase hover:bg-cream/10 transition-colors"
-            >
-              {t("navMenu")}
             </Link>
             <Link
               to="/logistics"

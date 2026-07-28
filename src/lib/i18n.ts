@@ -8,10 +8,9 @@ export const t: Dict = {
   navGallery: { en: "Gallery", el: "Γκαλερί" },
   navVendors: { en: "Vendors", el: "Συνεργάτες" },
   navLogistics: { en: "Travel & Stay", el: "Ταξίδι & Διαμονή" },
-  navMenu: { en: "Menu", el: "Μενού" },
 
   heroKicker: { en: "Folegandros · 21 August 2027", el: "Φολέγανδρος · 21 Αυγούστου 2027" },
-  heroTitle: { en: "Mafalda & Thanos", el: "Mafalda & Thanos" },
+  heroTitle: { en: "Rafaela & Thanos", el: "Ραφαέλα & Θάνος" },
   heroSubtitle: {
     en: "A Cycladic wedding — curated, cinematic, unforgettable.",
     el: "Ένας γάμος στις Κυκλάδες — φροντισμένος, κινηματογραφικός, αξέχαστος.",
@@ -21,8 +20,8 @@ export const t: Dict = {
   letterKicker: { en: "A note from our team", el: "Ένα σημείωμα" },
   letterTitle: { en: "Your day, in our hands", el: "Η μέρα σας, στα χέρια μας" },
   letterBody: {
-    en: "Thank you for considering us for your Folegandros wedding. What follows is a complete proposal for photography, videography and every essential detail of the day — vendors, logistics, hotels and menu — carefully assembled so you can plan with clarity and confidence.",
-    el: "Σας ευχαριστούμε που μας εμπιστεύεστε τον γάμο σας στη Φολέγανδρο. Παρακάτω θα βρείτε μια ολοκληρωμένη πρόταση για φωτογραφία, βιντεογράφηση και κάθε λεπτομέρεια της ημέρας — συνεργάτες, ταξίδι, ξενοδοχεία και μενού — με απόλυτη διαφάνεια για να προγραμματίσετε με σιγουριά.",
+    en: "Thank you for considering us for your Folegandros wedding. What follows is a complete proposal for photography, videography and every essential detail of the day — vendors, logistics and stay — carefully assembled so you can plan with clarity and confidence.",
+    el: "Σας ευχαριστούμε που μας εμπιστεύεστε τον γάμο σας στη Φολέγανδρο. Παρακάτω θα βρείτε μια ολοκληρωμένη πρόταση για φωτογραφία, βιντεογράφηση και κάθε λεπτομέρεια της ημέρας — συνεργάτες, ταξίδι και διαμονή — με απόλυτη διαφάνεια για να προγραμματίσετε με σιγουριά.",
   },
 
   packagesKicker: { en: "The investment", el: "Η επένδυση" },
@@ -52,12 +51,14 @@ export const t: Dict = {
 
   travelKicker: { en: "Getting there", el: "Πώς έρχεστε" },
   travelTitle: { en: "Boat tickets", el: "Εισιτήρια πλοίων" },
-  travelNote: { en: "Folegandros Travel discount 20–30% on all tickets", el: "Έκπτωση 20–30% από Folegandros Travel σε όλα τα εισιτήρια" },
+  travelNote: { en: "20–30% discount on all boat tickets", el: "Έκπτωση 20–30% σε όλα τα εισιτήρια πλοίων" },
 
   hotelsKicker: { en: "Where to stay", el: "Πού θα μείνετε" },
   hotelsTitle: { en: "Hotels", el: "Ξενοδοχεία" },
-  hotelsNote: { en: "Price range €90–€400 per night", el: "Τιμές €90–€400 ανά διανυκτέρευση" },
-  hotelBrideNote: { en: "Recommended for the bride — walking distance to both churches", el: "Προτείνεται για τη νύφη — κοντά στις εκκλησίες" },
+  hotelsNote: {
+    en: "Curated stay suggestions available on request · €90–€400 per night. Options walking distance to the churches for the couple.",
+    el: "Προτάσεις διαμονής κατόπιν συνεννόησης · €90–€400 ανά διανυκτέρευση. Επιλογές κοντά στις εκκλησίες για το ζευγάρι.",
+  },
 
   transportKicker: { en: "On the island", el: "Στο νησί" },
   transportTitle: { en: "Transportation", el: "Μετακινήσεις" },
@@ -75,7 +76,7 @@ export const t: Dict = {
     el: "Ενδεικτικά εύρη για ~80 καλεσμένους. Το τελικό σύνολο εξαρτάται από τις επιλογές σας.",
   },
   summaryTotal: { en: "Indicative core range", el: "Ενδεικτικό εύρος βασικών" },
-  summaryTotalPrice: { en: "€13,000–25,000", el: "13.000–25.000€" },
+  summaryTotalPrice: { en: "€8,000–15,000", el: "8.000–15.000€" },
 
   planKicker: { en: "Ready when you are", el: "Έτοιμοι όταν είστε" },
   planTitle: { en: "Let's plan your day", el: "Ας σχεδιάσουμε τη μέρα σας" },
@@ -84,7 +85,7 @@ export const t: Dict = {
     el: "Το έγγραφο αυτό είναι σημείο εκκίνησης. Κάθε στοιχείο προσαρμόζεται στη δική σας εικόνα. Επικοινωνήστε μαζί μας για να το διαμορφώσουμε μαζί.",
   },
   contactBtn: { en: "Portfolio", el: "Portfolio" },
-  footerNote: { en: "Prepared with care for Mafalda & Thanos", el: "Με φροντίδα για τους Mafalda & Thanos" },
+  footerNote: { en: "Prepared with care for Rafaela & Thanos", el: "Με φροντίδα για τους Ραφαέλα & Θάνος" },
 };
 
 export function useT() {

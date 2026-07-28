@@ -7,9 +7,9 @@ import ceremony from "@/assets/ceremony.jpg";
 export const Route = createFileRoute("/photography")({
   head: () => ({
     meta: [
-      { title: "Photography & Videography — Mafalda & Thanos" },
+      { title: "Photography & Videography — Rafaela & Thanos" },
       { name: "description", content: "Full photography and videography packages for the Folegandros wedding." },
-      { property: "og:title", content: "Photography & Videography — Mafalda & Thanos" },
+      { property: "og:title", content: "Photography & Videography — Rafaela & Thanos" },
       { property: "og:url", content: "/photography" },
     ],
     links: [{ rel: "canonical", href: "/photography" }],

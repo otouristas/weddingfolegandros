@@ -7,9 +7,9 @@ import folegandros from "@/assets/folegandros.jpg";
 export const Route = createFileRoute("/logistics")({
   head: () => ({
     meta: [
-      { title: "Travel & Stay — Mafalda & Thanos" },
+      { title: "Travel & Stay — Rafaela & Thanos" },
       { name: "description", content: "Boat tickets, hotels, on-island transportation and boat tour for the Folegandros wedding." },
-      { property: "og:title", content: "Travel & Stay — Mafalda & Thanos" },
+      { property: "og:title", content: "Travel & Stay — Rafaela & Thanos" },
       { property: "og:url", content: "/logistics" },
     ],
     links: [{ rel: "canonical", href: "/logistics" }],
@@ -41,7 +41,7 @@ function LogisticsPage() {
             <div className="kicker">{en ? "Boat tickets" : "Εισιτήρια πλοίων"}</div>
             <h2 className="font-display text-4xl mt-4">{en ? "Ferry options" : "Ακτοπλοϊκά"}</h2>
             <p className="mt-4 text-sm text-terracotta">
-              {en ? "20–30% discount via Folegandros Travel" : "20–30% έκπτωση μέσω Folegandros Travel"}
+              {en ? "20–30% discount on all boat tickets" : "Έκπτωση 20–30% σε όλα τα εισιτήρια πλοίων"}
             </p>
           </div>
           <div className="md:col-span-7 md:col-start-6">
@@ -67,25 +67,18 @@ function LogisticsPage() {
       </Section>
 
       <Section>
-        <div className="grid md:grid-cols-12 gap-10 mb-14">
+        <div className="grid md:grid-cols-12 gap-10">
           <div className="md:col-span-5">
             <SectionKicker>{en ? "Where to stay" : "Πού θα μείνετε"}</SectionKicker>
             <SectionTitle>{en ? "Hotel suggestions" : "Προτάσεις ξενοδοχείων"}</SectionTitle>
           </div>
           <div className="md:col-span-6 md:col-start-7 flex items-end">
-            <p className="text-sm text-muted-foreground">
-              {en ? "Prices range €90–€400 per night. Anemomilos is our top pick for the bride — walking distance to both churches." : "Τιμές €90–€400 ανά βράδυ. Το Anemomilos είναι η πρώτη μας επιλογή για τη νύφη — πολύ κοντά στις εκκλησίες."}
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {en
+                ? "Curated stay suggestions available on request · €90–€400 per night. Options walking distance to the churches for the couple."
+                : "Προτάσεις διαμονής κατόπιν συνεννόησης · €90–€400 ανά βράδυ. Επιλογές κοντά στις εκκλησίες για το ζευγάρι."}
             </p>
           </div>
-        </div>
-
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-x-6 gap-y-8">
-          {["Anemomilos", "Chora Resort", "Aria Boutique Hotel", "Marine", "Horizon", "Kifines Suites", "Avaton", "Eygenia Rooms"].map((h, i) => (
-            <div key={h} className="border-t border-border pt-4">
-              <div className="text-[10px] tracking-[0.3em] uppercase text-muted-foreground">{String(i + 1).padStart(2, "0")}</div>
-              <div className="font-display text-2xl mt-2">{h}</div>
-            </div>
-          ))}
         </div>
       </Section>
 

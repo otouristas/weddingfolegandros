@@ -6,9 +6,9 @@ import { Footer } from "@/components/site/Footer";
 export const Route = createFileRoute("/vendors")({
   head: () => ({
     meta: [
-      { title: "Vendors — Mafalda & Thanos" },
-      { name: "description", content: "DJ, flowers, hair & makeup, wedding planner, cake and catering for the Folegandros wedding." },
-      { property: "og:title", content: "Vendors — Mafalda & Thanos" },
+      { title: "Vendors — Rafaela & Thanos" },
+      { name: "description", content: "DJ, flowers, hair & makeup, wedding planner, cake and sweets for the Folegandros wedding." },
+      { property: "og:title", content: "Vendors — Rafaela & Thanos" },
       { property: "og:url", content: "/vendors" },
     ],
     links: [{ rel: "canonical", href: "/vendors" }],
@@ -58,21 +58,10 @@ function VendorsPage() {
 
       <VendorBlock
         dark
-        kicker={en ? "04 · Catering" : "04 · Catering"}
-        title={en ? "The table" : "Το τραπέζι"}
-        rows={[
-          { l: en ? "Paliomilos Restaurant — see menu" : "Paliomilos Restaurant — δείτε μενού", p: en ? "from €55 / person" : "από €55 / άτομο" },
-          { l: "Piatsa Taverna", p: "€55–100 / person" },
-          { l: en ? "  + shared yard rental (Souvlaki Club)" : "  + ενοικίαση αυλής (Souvlaki Club)", p: "€2,000", sub: true },
-          { l: en ? "Kritikos · Chic (May, June, September only)" : "Kritikos · Chic (Μάιος, Ιούνιος, Σεπτέμβριος)", p: "—" },
-        ]}
-      />
-
-      <VendorBlock
-        kicker={en ? "05 · Wedding Planner" : "05 · Wedding Planner"}
+        kicker={en ? "04 · Wedding Planner" : "04 · Wedding Planner"}
         title={en ? "Every detail, handled" : "Κάθε λεπτομέρεια, φροντισμένη"}
         rows={[
-          { l: en ? "Up to 80 guests" : "Έως 80 καλεσμένους", p: "€2,000" },
+          { l: en ? "Up to 80 guests" : "Έως 80 καλεσμένους", p: "€1,500" },
           { l: en ? "Pre-wedding OR next-day shoot" : "Pre-wedding Ή next-day", p: "€500" },
           { l: en ? "Both pre-wedding + next-day" : "Και pre-wedding + next-day", p: "€1,000" },
         ]}
@@ -80,8 +69,7 @@ function VendorsPage() {
       />
 
       <VendorBlock
-        dark
-        kicker={en ? "06 · Cake & Sweets" : "06 · Κέικ & Γλυκά"}
+        kicker={en ? "05 · Cake & Sweets" : "05 · Κέικ & Γλυκά"}
         title={en ? "Wedding cake & sweets" : "Γαμήλια τούρτα & γλυκά"}
         rows={[
           {

@@ -12,7 +12,7 @@ export function Nav() {
   const [open, setOpen] = useState(false);
 
   const links: Array<{
-    to: "/" | "/photography" | "/gallery" | "/vendors" | "/logistics" | "/menu";
+    to: "/" | "/photography" | "/gallery" | "/vendors" | "/logistics";
     key: Parameters<typeof t>[0];
   }> = [
     { to: "/", key: "navHome" },
@@ -20,7 +20,6 @@ export function Nav() {
     { to: "/gallery", key: "navGallery" },
     { to: "/vendors", key: "navVendors" },
     { to: "/logistics", key: "navLogistics" },
-    { to: "/menu", key: "navMenu" },
   ];
 
   return (
@@ -31,7 +30,7 @@ export function Nav() {
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
         <Link to="/" className={`font-display text-lg tracking-tight ${isHome ? "text-cream" : "text-ink"}`}>
-          M <span className="opacity-50">&</span> T
+          R <span className="opacity-50">&</span> T
         </Link>
         <nav className={`hidden md:flex items-center gap-8 text-[13px] tracking-wide ${isHome ? "text-cream/90" : "text-ink/80"}`}>
           {links.map((l) => (
@@ -63,7 +62,7 @@ export function Nav() {
             <SheetContent side="right" className="bg-cream border-border w-[min(100%,20rem)]">
               <SheetHeader>
                 <SheetTitle className="font-display text-ink text-left text-lg font-medium tracking-tight">
-                  M <span className="opacity-50">&</span> T
+                  R <span className="opacity-50">&</span> T
                 </SheetTitle>
               </SheetHeader>
               <nav className="mt-8 flex flex-col gap-6 text-[15px] tracking-wide text-ink/80">
