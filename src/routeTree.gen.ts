@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as VendorsRouteImport } from './routes/vendors'
+import { Route as RafaelaGiannisRouteImport } from './routes/rafaela-giannis'
 import { Route as PhotographyRouteImport } from './routes/photography'
 import { Route as LogisticsRouteImport } from './routes/logistics'
 import { Route as GalleryRouteImport } from './routes/gallery'
@@ -18,6 +19,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const VendorsRoute = VendorsRouteImport.update({
   id: '/vendors',
   path: '/vendors',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const RafaelaGiannisRoute = RafaelaGiannisRouteImport.update({
+  id: '/rafaela-giannis',
+  path: '/rafaela-giannis',
   getParentRoute: () => rootRouteImport,
 } as any)
 const PhotographyRoute = PhotographyRouteImport.update({
@@ -46,6 +52,7 @@ export interface FileRoutesByFullPath {
   '/gallery': typeof GalleryRoute
   '/logistics': typeof LogisticsRoute
   '/photography': typeof PhotographyRoute
+  '/rafaela-giannis': typeof RafaelaGiannisRoute
   '/vendors': typeof VendorsRoute
 }
 export interface FileRoutesByTo {
@@ -53,6 +60,7 @@ export interface FileRoutesByTo {
   '/gallery': typeof GalleryRoute
   '/logistics': typeof LogisticsRoute
   '/photography': typeof PhotographyRoute
+  '/rafaela-giannis': typeof RafaelaGiannisRoute
   '/vendors': typeof VendorsRoute
 }
 export interface FileRoutesById {
@@ -61,14 +69,34 @@ export interface FileRoutesById {
   '/gallery': typeof GalleryRoute
   '/logistics': typeof LogisticsRoute
   '/photography': typeof PhotographyRoute
+  '/rafaela-giannis': typeof RafaelaGiannisRoute
   '/vendors': typeof VendorsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/gallery' | '/logistics' | '/photography' | '/vendors'
+  fullPaths:
+    | '/'
+    | '/gallery'
+    | '/logistics'
+    | '/photography'
+    | '/rafaela-giannis'
+    | '/vendors'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/gallery' | '/logistics' | '/photography' | '/vendors'
-  id: '__root__' | '/' | '/gallery' | '/logistics' | '/photography' | '/vendors'
+  to:
+    | '/'
+    | '/gallery'
+    | '/logistics'
+    | '/photography'
+    | '/rafaela-giannis'
+    | '/vendors'
+  id:
+    | '__root__'
+    | '/'
+    | '/gallery'
+    | '/logistics'
+    | '/photography'
+    | '/rafaela-giannis'
+    | '/vendors'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -76,6 +104,7 @@ export interface RootRouteChildren {
   GalleryRoute: typeof GalleryRoute
   LogisticsRoute: typeof LogisticsRoute
   PhotographyRoute: typeof PhotographyRoute
+  RafaelaGiannisRoute: typeof RafaelaGiannisRoute
   VendorsRoute: typeof VendorsRoute
 }
 
@@ -86,6 +115,13 @@ declare module '@tanstack/react-router' {
       path: '/vendors'
       fullPath: '/vendors'
       preLoaderRoute: typeof VendorsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/rafaela-giannis': {
+      id: '/rafaela-giannis'
+      path: '/rafaela-giannis'
+      fullPath: '/rafaela-giannis'
+      preLoaderRoute: typeof RafaelaGiannisRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/photography': {
@@ -124,6 +160,7 @@ const rootRouteChildren: RootRouteChildren = {
   GalleryRoute: GalleryRoute,
   LogisticsRoute: LogisticsRoute,
   PhotographyRoute: PhotographyRoute,
+  RafaelaGiannisRoute: RafaelaGiannisRoute,
   VendorsRoute: VendorsRoute,
 }
 export const routeTree = rootRouteImport
