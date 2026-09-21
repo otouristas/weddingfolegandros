@@ -78,6 +78,18 @@ function Index() {
         </div>
       </Section>
 
+      <div className="border-y border-border bg-lemon/20">
+        <div className="mx-auto flex max-w-[1400px] flex-col items-start justify-between gap-5 px-6 py-7 md:flex-row md:items-center md:px-10">
+          <div>
+            <div className="kicker">{lang === "en" ? "Another celebration" : "Μια ακόμη γιορτή"}</div>
+            <p className="mt-2 font-display text-2xl text-ink">Rafaela & Giannis · 02.10.2027</p>
+          </div>
+          <Link to="/rafaela-giannis" className="text-xs uppercase tracking-[0.18em] text-terracotta hover:opacity-70">
+            {lang === "en" ? "View their proposal" : "Δείτε την πρότασή τους"} →
+          </Link>
+        </div>
+      </div>
+
       {/* PACKAGES */}
       <Section id="packages" className="bg-secondary/60">
         <div className="text-center max-w-2xl mx-auto">

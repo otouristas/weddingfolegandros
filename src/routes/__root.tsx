@@ -75,8 +75,6 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:title", content: "Rafaela & Paraskevas" },
       { name: "twitter:description", content: "A curated wedding proposal for a Cycladic celebration — photography, videography, vendors and travel." },
-      { property: "og:image", content: "https://weddingfolegandros.lovable.app/og-image.png" },
-      { name: "twitter:image", content: "https://weddingfolegandros.lovable.app/og-image.png" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },

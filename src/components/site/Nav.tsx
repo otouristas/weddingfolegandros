@@ -9,10 +9,11 @@ export function Nav() {
   const t = useT();
   const pathname = useRouterState({ select: (s) => s.location.pathname });
   const isHome = pathname === "/";
+  const isGiannis = pathname === "/rafaela-giannis";
   const [open, setOpen] = useState(false);
 
   const links: Array<{
-    to: "/" | "/photography" | "/gallery" | "/vendors" | "/logistics";
+    to: "/" | "/photography" | "/gallery" | "/vendors" | "/logistics" | "/rafaela-giannis";
     key: Parameters<typeof t>[0];
   }> = [
     { to: "/", key: "navHome" },
@@ -22,18 +23,20 @@ export function Nav() {
     { to: "/logistics", key: "navLogistics" },
   ];
 
+  const lightNav = isHome || isGiannis;
+
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-colors duration-500 ${
-        isHome ? "bg-transparent" : "bg-cream/90 backdrop-blur-md border-b border-border"
+        lightNav ? "bg-transparent" : "bg-cream/90 backdrop-blur-md border-b border-border"
       }`}
     >
       <div className="max-w-[1400px] mx-auto px-6 md:px-10 h-16 flex items-center justify-between">
-        <Link to="/" className={`font-display text-lg tracking-tight ${isHome ? "text-cream" : "text-ink"}`}>
-          R <span className="opacity-50">&</span> P
+        <Link to={isGiannis ? "/rafaela-giannis" : "/"} className={`font-display text-lg tracking-tight ${lightNav ? "text-cream" : "text-ink"}`}>
+          R <span className="opacity-50">&</span> {isGiannis ? "G" : "P"}
         </Link>
-        <nav className={`hidden md:flex items-center gap-8 text-[13px] tracking-wide ${isHome ? "text-cream/90" : "text-ink/80"}`}>
-          {links.map((l) => (
+        <nav className={`hidden md:flex items-center gap-8 text-[13px] tracking-wide ${lightNav ? "text-cream/90" : "text-ink/80"}`}>
+          {(isGiannis ? [] : links).map((l) => (
             <Link
               key={l.to}
               to={l.to}
@@ -44,6 +47,12 @@ export function Nav() {
               {t(l.key)}
             </Link>
           ))}
+          <Link
+            to={isGiannis ? "/" : "/rafaela-giannis"}
+            className="border-b border-current pb-1 hover:opacity-70 transition-opacity"
+          >
+            {isGiannis ? "R & P" : "R & G"}
+          </Link>
         </nav>
         <div className="flex items-center gap-3">
           <LangToggle />
@@ -52,7 +61,7 @@ export function Nav() {
               <button
                 type="button"
                 className={`md:hidden inline-flex items-center justify-center p-1.5 -mr-1.5 transition-opacity hover:opacity-70 ${
-                  isHome ? "text-cream" : "text-ink"
+                  lightNav ? "text-cream" : "text-ink"
                 }`}
                 aria-label="Open menu"
               >
@@ -62,11 +71,11 @@ export function Nav() {
             <SheetContent side="right" className="bg-cream border-border w-[min(100%,20rem)]">
               <SheetHeader>
                 <SheetTitle className="font-display text-ink text-left text-lg font-medium tracking-tight">
-                  R <span className="opacity-50">&</span> P
+                  R <span className="opacity-50">&</span> {isGiannis ? "G" : "P"}
                 </SheetTitle>
               </SheetHeader>
               <nav className="mt-8 flex flex-col gap-6 text-[15px] tracking-wide text-ink/80">
-                {links.map((l) => (
+                {(isGiannis ? [] : links).map((l) => (
                   <Link
                     key={l.to}
                     to={l.to}
@@ -78,6 +87,13 @@ export function Nav() {
                     {t(l.key)}
                   </Link>
                 ))}
+                <Link
+                  to={isGiannis ? "/" : "/rafaela-giannis"}
+                  onClick={() => setOpen(false)}
+                  className="text-terracotta hover:opacity-70 transition-opacity"
+                >
+                  {isGiannis ? "Rafaela & Paraskevas" : "Rafaela & Giannis"}
+                </Link>
               </nav>
             </SheetContent>
           </Sheet>
