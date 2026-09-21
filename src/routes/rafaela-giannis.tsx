@@ -1,4 +1,4 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
+import { createFileRoute } from "@tanstack/react-router";
 import { ArrowRight, Check } from "lucide-react";
 import { useLang } from "@/hooks/use-language";
 import { Section, SectionKicker, SectionTitle } from "@/components/site/Section";
@@ -193,9 +193,6 @@ function RafaelaGiannisPage() {
         <div className="mx-auto flex max-w-[1400px] flex-col items-center justify-between gap-5 px-6 py-12 text-center md:flex-row md:px-10 md:text-left">
           <div className="font-display text-2xl">Rafaela <span className="text-terracotta">&</span> Giannis</div>
           <div className="text-xs uppercase tracking-[0.2em] text-muted-foreground">Folegandros · 02.10.2027</div>
-          <Link to="/" className="text-xs uppercase tracking-[0.16em] text-terracotta hover:opacity-70">
-            {en ? "View Rafaela & Paraskevas" : "Δείτε Ραφαέλα & Παρασκευά"} →
-          </Link>
         </div>
       </footer>
     </main>
